@@ -1,39 +1,3 @@
-NONTERMS = [
-    "<program>",
-    "<statement>",
-    "<declaration>",
-    "<var_declaration>",
-    "<const_declaration>",
-    "<function_declare>",
-    "<identifier>",
-    "<begin>",
-    "<letter>",
-    "<name>",
-    "<digit>",
-    "<expression>",
-    "<expression_tail>",  # New non-terminal for handling right recursion
-    "<primary_expression>",  # New non-terminal for primary expressions
-    "<operator>",
-    "<singleOp>",
-    "<logicOp>",
-    "<number>",
-    "<string>",
-    "<text>",
-    "<block>",
-    "<call>",
-    "<return>",
-    "<print>",
-    "<if-condition>",
-    "<condition>",
-    "<condition_tail>",  # New non-terminal for handling logical operations in conditions
-    "<primary_condition>",  # New non-terminal for the core condition expression
-    "<compOp>",
-    "<loop>",
-    "<keyword>",
-    "<LBracket>",
-    "<RBracket>",
-    "<datatype>"
-]
 
 
 TERMS = [
