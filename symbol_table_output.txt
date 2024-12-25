@@ -1,0 +1,6 @@
+Counter   Variable Name       Address   Data Type      No. of Dimensions   Line Declaration    Reference Line
+===============================================================================================
+0         name                0         string         0                   1                   1, 6
+1         age                 8         int            0                   2                   2, 9, 22
+2         gpa                 10        float          0                   3                   3, 22
+3         sum                 14        void           2                   18                  18, 22

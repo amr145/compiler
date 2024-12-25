@@ -1,0 +1,22 @@
+string name="asmaa";
+int age=21;
+float gpa=3.5;
+
+for(int i=0,i<5,i++){
+    print(name*5);
+}
+
+if age>17 {
+    print("adult");
+}
+
+else {
+    print("child");
+}
+
+
+do sum(int a, int b){
+    print("");
+    return a + b;
+}
+print (call sum(age,gpa));

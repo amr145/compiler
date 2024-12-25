@@ -1,0 +1,104 @@
+_______________ Tokens Set _______________
+
+Tokens:
+('<datatype>', 'int')
+('<identifier>', 'x')
+('<assign>', '=')
+('<number>', 2)
+('<datatype>', 'float')
+('<identifier>', 'y')
+('<assign>', '=')
+('<number>', 3.3)
+('<datatype>', 'string')
+('<identifier>', 'name')
+('<assign>', '=')
+('<string>', 'aa')
+('<keyword>', 'if')
+('<identifier>', 'x')
+('<compOp>', '<')
+('<identifier>', 'y')
+('<block>',)
+('<identifier>', 'y')
+('<assign>', '=')
+('<number>', 1)
+('<RBracket>', '}')
+('<keyword>', 'else')
+('<block>',)
+('<identifier>', 'y')
+('<assign>', '=')
+('<number>', 5)
+('<operator>', '+')
+('<number>', 1)
+('<RBracket>', '}')
+('<keyword>', 'for')
+('<LBracket>', '(')
+('<datatype>', 'int')
+('<identifier>', 'i')
+('<assign>', '=')
+('<number>',)
+('<separator>', ',')
+('<identifier>', 'i')
+('<compOp>', '<')
+('<number>', 10)
+('<separator>', ',')
+('<identifier>', 'i')
+('<singleOp>', '--')
+('<RBracket>', ')')
+('<block>',)
+('<keyword>', 'print')
+('<LBracket>', '(')
+('<string>',)
+('<RBracket>', ')')
+('<RBracket>', '}')
+('<keyword>', 'do')
+('<identifier>', 'sum')
+('<LBracket>', '(')
+('<datatype>', 'int')
+('<identifier>', 'a')
+('<separator>', ',')
+('<datatype>', 'int')
+('<identifier>', 'b')
+('<RBracket>', ')')
+('<block>',)
+('<keyword>', 'print')
+('<LBracket>', '(')
+('<string>',)
+('<RBracket>', ')')
+('<keyword>', 'return')
+('<identifier>', 'a')
+('<operator>', '+')
+('<identifier>', 'b')
+('<RBracket>', '}')
+
+Number of unique token types: 13
+
+_______________ First Set _______________
+
+FIRST(<datatype>) = { float, int, string }
+FIRST(<identifier>) = { A-Z, _, a-z }
+FIRST(<assign>) = { <assign> }
+FIRST(<number>) = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, epsilon }
+FIRST(<string>) = { " }
+FIRST(<keyword>) = { call, do, elif, else, epsilon, for, if, print, return }
+FIRST(<compOp>) = { <, <=, <>, ==, >, >= }
+FIRST(<block>) = { { }
+FIRST(<RBracket>) = { ), } }
+FIRST(<operator>) = { *, +, -, / }
+FIRST(<LBracket>) = { ( }
+FIRST(<separator>) = { <separator> }
+FIRST(<singleOp>) = { ++, -- }
+_______________ Follow Set _______________
+
+FOLLOW(<datatype>) = { A-Z, _, a-z }
+FOLLOW(<identifier>) = { ), *, +, -, /, ;, <, <=, <>, =, ==, >, >=, and, not, or }
+FOLLOW(<assign>) = {  }
+FOLLOW(<number>) = { ), *, +, -, /, ;, <, <=, <>, ==, >, >=, and, not, or }
+FOLLOW(<string>) = { ), *, +, -, /, ;, <, <=, <>, ==, >, >=, and, not, or }
+FOLLOW(<keyword>) = {  }
+FOLLOW(<compOp>) = { ", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A-Z, _, a-z }
+FOLLOW(<block>) = { <block> }
+FOLLOW(<RBracket>) = {  }
+FOLLOW(<operator>) = { ", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A-Z, _, a-z }
+FOLLOW(<LBracket>) = {  }
+FOLLOW(<separator>) = { <separator> }
+FOLLOW(<singleOp>) = {  }
